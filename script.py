@@ -13,7 +13,7 @@ products_df = pd.read_excel(products_file)
 orders_df = pd.read_excel(orders_file)
 
 # Merge the dataframes on a common column, e.g., 'Product Name'
-merged_df = pd.merge(orders_df, products_df[['Product Name', 'Rate', 'Product ID']], on='Product ID', how='left')
+merged_df = pd.merge(orders_df, products_df[['Product Name', 'Rate', 'Product ID']], on = 'Product ID', how = 'left')
 
 # Save the new dataframe to a new Excel file
 merged_df.to_excel(output_file, index = False)
